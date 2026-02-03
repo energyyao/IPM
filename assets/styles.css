@@ -133,11 +133,11 @@ header {
 }
 
 .hero {
-  padding: 80px 0 60px;
+  padding: 64px 0 48px;
   display: grid;
   gap: 24px;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  align-items: center;
+  align-items: stretch;
 }
 
 .hero-card {
@@ -145,11 +145,12 @@ header {
   border-radius: 24px;
   padding: 32px;
   box-shadow: var(--shadow);
+  height: 100%;
 }
 
 .hero h1 {
   font-family: 'DM Serif Display', serif;
-  font-size: clamp(2.4rem, 3vw, 3.4rem);
+  font-size: 2rem;
   margin: 0 0 12px;
   color: var(--deep);
 }
@@ -160,8 +161,10 @@ header {
 }
 
 .hero-rail {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 18px;
+  height: 100%;
 }
 
 .badge {
@@ -199,11 +202,17 @@ header {
   padding: 24px;
   box-shadow: 0 20px 35px rgba(15, 42, 46, 0.12);
   border: 1px solid rgba(15, 42, 46, 0.06);
+  display: flex;
+  flex-direction: column;
 }
 
 .card h3 {
   margin-top: 0;
   color: var(--teal-dark);
+}
+
+.card p {
+  margin: 0 0 12px;
 }
 
 .callout {
@@ -234,6 +243,11 @@ footer {
 
 footer a {
   color: var(--peach);
+}
+
+.footer .small,
+footer .small {
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .small {
@@ -285,6 +299,16 @@ input, textarea {
   box-shadow: 0 12px 24px rgba(15, 42, 46, 0.08);
 }
 
+.compact-list {
+  margin: 4px 0 12px;
+  padding-left: 18px;
+  color: #2f3f3f;
+}
+
+.compact-list li {
+  margin-bottom: 8px;
+}
+
 @media (max-width: 700px) {
   .nav {
     flex-direction: column;
@@ -296,14 +320,15 @@ input, textarea {
     flex-direction: column;
     align-items: flex-start;
     display: none;
-    padding-top: 12px;
+    padding-top: 6px;
+    gap: 8px;
     position: relative;
     z-index: 1;
   }
 
   .nav-links a {
     width: 100%;
-    padding: 8px 0;
+    padding: 4px 0;
   }
 
   .nav-links .button {
@@ -329,7 +354,15 @@ input, textarea {
   }
 
   .hero {
-    padding: 56px 0 40px;
+    padding: 48px 0 36px;
+  }
+
+  .hero h1 {
+    font-size: 1.85rem;
+  }
+
+  .section h2 {
+    font-size: 1.85rem;
   }
 
   .hero-card {
@@ -357,7 +390,7 @@ input, textarea {
   }
 
   .hero h1 {
-    font-size: 2.1rem;
+    font-size: 1.75rem;
   }
 
   .page-hero h1 {
